@@ -8,7 +8,7 @@ library(rasterVis)
 library(mapview)
 library(caret)
 
-path = "C:/Users/Elizabeth.Wiley/OneDrive - Essex County Council/Data accelerator_Geospatial data/rasters_v2"
+path = "C:/Users/Geospatial data/rasters_v2"
 setwd(path)
 
 raster_ag <- raster( 'raster_ag.tif')
@@ -81,8 +81,6 @@ table(predict(nat_green_rf), trainData$labels)
 X = final_vector_array
 y = final_label_array
 
-X = nat_green_df
-y=table(predict(nat_green_rf), trainData$labels)
 #
 set.seed(42)
 test_inds = createDataPartition(y = 1:length(y), p = 0.2, list = F) #
